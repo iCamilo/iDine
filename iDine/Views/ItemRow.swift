@@ -17,26 +17,39 @@ struct ItemRow: View {
         
     var body: some View {
         HStack {
-            Image(item.thumbnailImage)
-                .clipShape(Circle())
-                .overlay(Circle().stroke(.gray, lineWidth: 2))
-            VStack(alignment: .leading) {
-                Text(item.name)
-                    .font(.headline)
-                Text("$\(item.price)")
-            }
+            thumbnailImage
+            
+            itemInfo
             
             Spacer()
             
-            ForEach(item.restrictions, id: \.self) { restriction in
-                Text(restriction)
-                    .font(.caption)
-                    .fontWeight(.black)
-                    .padding(5.0)
-                    .background(colors[restriction])
-                    .clipShape(Circle())
-                    .foregroundStyle(.white)
-            }
+            dietaryRestrictions
+        }
+    }
+    
+    private var thumbnailImage: some View {
+        Image(item.thumbnailImage)
+            .clipShape(Circle())
+            .overlay(Circle().stroke(.gray, lineWidth: 2))
+    }
+    
+    private var itemInfo: some View {
+        VStack(alignment: .leading) {
+            Text(item.name)
+                .font(.headline)
+            Text("$\(item.price)")
+        }
+    }
+    
+    private var dietaryRestrictions: some View {
+        ForEach(item.restrictions, id: \.self) { restriction in
+            Text(restriction)
+                .font(.caption)
+                .fontWeight(.black)
+                .padding(5.0)
+                .background(colors[restriction])
+                .clipShape(Circle())
+                .foregroundStyle(.white)
         }
     }
 }
