@@ -17,6 +17,7 @@ struct OrderView: View {
                 Section {
                     checkOut
                 }
+                .disabled(order.items.isEmpty)
             }
             .navigationTitle("Order")
             .toolbar {
