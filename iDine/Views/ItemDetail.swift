@@ -6,6 +6,7 @@ import SwiftUI
 
 struct ItemDetail: View {
     let item: MenuItem
+    @EnvironmentObject var order: Order
     
     var body: some View {
         VStack {
@@ -20,8 +21,15 @@ struct ItemDetail: View {
                     .background(.black)
                     .offset(x: -5, y: -5)
             }
+            
             Text(item.description)
                 .padding()
+            
+            Button("Add to Cart") {
+                order.add(item: item)
+            }
+            .buttonStyle(.borderedProminent)
+            
             Spacer()
         }
         .navigationTitle(item.name)
@@ -30,7 +38,17 @@ struct ItemDetail: View {
 }
 
 #Preview {
-    NavigationStack {
-        ItemDetail(item: MenuItem.example)
+    return ItemDetailTestView()
+    
+    struct ItemDetailTestView: View {
+        @StateObject var order = Order()
+        
+        var body: some View {
+            NavigationStack {
+                ItemDetail(item: MenuItem.example)
+                
+                Text("Total items: \(order.items.count) Total Value: $\(order.total)")
+            }.environmentObject(order)
+        }
     }
 }

@@ -10,6 +10,9 @@ import SwiftUI
 
 class Order: ObservableObject {
     @Published var items = [MenuItem]()
+    private(set) var name: String
+    
+    init(name: String = "") { self.name = name }
 
     var total: Int {
         if items.count > 0 {
