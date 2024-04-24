@@ -34,7 +34,7 @@ struct OrderView: View {
     
     private var checkOut: some View {
         NavigationLink("Check Out") {
-            Text("Check Out")
+            CheckOutView()
         }
     }
 }
