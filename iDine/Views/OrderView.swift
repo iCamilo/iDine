@@ -8,16 +8,18 @@ struct OrderView: View {
     @EnvironmentObject var order: Order
     
     var body: some View {
-        List {
-            Section {
-                orderItems
+        NavigationStack {
+            List {
+                Section {
+                    orderItems
+                }
+                
+                Section {
+                    checkOut
+                }
             }
-            
-            Section {
-                checkOut
-            }
-        }
-        .navigationTitle("Order")
+            .navigationTitle("Order")
+        }        
     }
     
     private var orderItems: some View {
@@ -46,9 +48,7 @@ struct OrderView: View {
         
         var body: some View {
             VStack {
-                NavigationStack {
-                    OrderView()
-                }
+                OrderView()
                 
                 Button("Add Item") {
                     order.add(item: MenuItem.example)
