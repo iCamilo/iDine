@@ -94,11 +94,11 @@
 		5B5F98E72BD81D83007F0887 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5B5F98EF2BD9ABC7007F0887 /* MainView.swift */,
 				5B5F97C52BD7FB77007F0887 /* ContentView.swift */,
 				5B5F98E52BD81A70007F0887 /* ItemRow.swift */,
 				5B5F98EB2BD96AA8007F0887 /* ItemDetail.swift */,
 				5B5F98ED2BD998D2007F0887 /* OrderView.swift */,
-				5B5F98EF2BD9ABC7007F0887 /* MainView.swift */,
 				5B5F98F12BD9AE5A007F0887 /* CheckOutView.swift */,
 			);
 			path = Views;

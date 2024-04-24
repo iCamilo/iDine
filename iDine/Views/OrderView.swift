@@ -19,7 +19,10 @@ struct OrderView: View {
                 }
             }
             .navigationTitle("Order")
-        }        
+            .toolbar {
+                EditButton()
+            }
+        }
     }
     
     private var orderItems: some View {
@@ -30,6 +33,9 @@ struct OrderView: View {
                 Text("$\(item.price)")
             }
         }
+        .onDelete(perform: { indexSet in
+            order.items.remove(atOffsets: indexSet)
+        })
     }
     
     private var checkOut: some View {
@@ -50,10 +56,14 @@ struct OrderView: View {
             VStack {
                 OrderView()
                 
-                Button("Add Item") {
-                    order.add(item: MenuItem.example)
+                VStack {
+                    Button("Add Item") {
+                        order.add(item: MenuItem.example)
+                    }
+                    .buttonStyle(.borderedProminent)
+                    
+                    Text("Order has \(order.items.count) items")
                 }
-                .buttonStyle(.borderedProminent)
             }
             .environmentObject(order)
         }
