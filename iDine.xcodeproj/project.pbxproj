@@ -17,6 +17,7 @@
 		5B5F98E42BD81072007F0887 /* menu.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B5F98E32BD81072007F0887 /* menu.json */; };
 		5B5F98E62BD81A70007F0887 /* ItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5F98E52BD81A70007F0887 /* ItemRow.swift */; };
 		5B5F98EC2BD96AA8007F0887 /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5F98EB2BD96AA8007F0887 /* ItemDetail.swift */; };
+		5B5F98EE2BD998D2007F0887 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5F98ED2BD998D2007F0887 /* OrderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		5B5F98E32BD81072007F0887 /* menu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = menu.json; sourceTree = "<group>"; };
 		5B5F98E52BD81A70007F0887 /* ItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRow.swift; sourceTree = "<group>"; };
 		5B5F98EB2BD96AA8007F0887 /* ItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
+		5B5F98ED2BD998D2007F0887 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				5B5F97C52BD7FB77007F0887 /* ContentView.swift */,
 				5B5F98E52BD81A70007F0887 /* ItemRow.swift */,
 				5B5F98EB2BD96AA8007F0887 /* ItemDetail.swift */,
+				5B5F98ED2BD998D2007F0887 /* OrderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B5F98EC2BD96AA8007F0887 /* ItemDetail.swift in Sources */,
+				5B5F98EE2BD998D2007F0887 /* OrderView.swift in Sources */,
 				5B5F97C62BD7FB77007F0887 /* ContentView.swift in Sources */,
 				5B5F97C42BD7FB77007F0887 /* iDineApp.swift in Sources */,
 				5B5F97DB2BD802C4007F0887 /* Order.swift in Sources */,
