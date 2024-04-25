@@ -11,14 +11,22 @@ struct MainView: View {
                 .tabItem {
                     Label("Menu", systemImage: "list.dash")
                 }
+            
             OrderView()
                 .tabItem {
                     Label("Order", systemImage: "square.and.pencil")
+                }
+            
+            FavoritesView()
+                .tabItem {
+                    Label("Favorites", systemImage: "bookmark")
                 }
         }
     }
 }
 
 #Preview {
-    MainView().environmentObject(Order())
+    MainView()
+        .environmentObject(Order())
+        .environmentObject(Favorites())
 }
