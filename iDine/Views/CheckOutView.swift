@@ -7,6 +7,7 @@ import SwiftUI
 struct CheckOutView: View {
     private let paymentMethods = ["Cash", "Card", "Points"]
     private let tipAmounts = ["0", "5", "10", "15"]
+    private let pickupTimes = ["Now", "Tonight", "Tomorrow Morning"]
     
     @EnvironmentObject var order: Order
     @State private var paymentMethod: String = "Cash"
@@ -14,6 +15,7 @@ struct CheckOutView: View {
     @State private var iDineCardNumber: String = ""
     @State private var tipAmount: String = "5"
     @State private var showConfirmOrder: Bool = false
+    @State private var pickupTime: String = "Now"
     
     var totalPrice: String {
         let total = Double(order.total)
@@ -35,6 +37,10 @@ struct CheckOutView: View {
             
             Section("Add a Tip?") {
                 tipPicker
+            }
+            
+            Section("Pickup Time") {
+                pickUpTimePicker
             }
             
             Section("Total: \(totalPrice)") {
@@ -81,6 +87,15 @@ struct CheckOutView: View {
         }
     }
     
+    private var pickUpTimePicker: some View {
+        Picker("Pickup Time", selection: $pickupTime) {
+            ForEach(pickupTimes, id: \.self) { time in
+                Text(time)
+            }
+        }
+        .pickerStyle(.wheel)
+    }
+    
     private var confirmMessage: some View {
         let iDineCardMessage = hasIDineCard ? "You used your iDineCard number \(iDineCardNumber)" : "You did not use an iDineCard"
         let confirmMessage = """
@@ -88,6 +103,7 @@ struct CheckOutView: View {
         You payed using \(paymentMethod). 
         \(iDineCardMessage).
         You tipped \(tipAmount)%.
+        Pick up time \(pickupTime)
         
         Thanks!
         """
