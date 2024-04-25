@@ -5,9 +5,11 @@
 import SwiftUI
 
 struct ItemDetail: View {
-    let item: MenuItem
     @EnvironmentObject var order: Order
+    @EnvironmentObject var favorites: Favorites
     
+    let item: MenuItem
+            
     var body: some View {
         VStack {
             image
@@ -20,6 +22,11 @@ struct ItemDetail: View {
             Spacer()
         }
         .navigationTitle(item.name)
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                favoriteToggle
+            }
+        }
         .navigationBarTitleDisplayMode(.inline)
     }
     
@@ -55,6 +62,15 @@ struct ItemDetail: View {
                                     style: .continuous))
         .shadow(color: .gray , radius: 5, x: 2, y: 2)
     }
+    
+    private var favoriteToggle: some View {
+        let isFavorite: Bool = favorites.isFavorite(item)
+        let isFavoriteImageName: String = isFavorite ? "bookmark.fill" : "bookmark"
+        
+        return Button("Favorite", systemImage: isFavoriteImageName) {
+            isFavorite ? favorites.remove(item) : favorites.add(item)
+        }
+    }
 }
 
 #Preview {
@@ -62,13 +78,17 @@ struct ItemDetail: View {
     
     struct ItemDetailTestView: View {
         @StateObject var order = Order()
+        @StateObject var favorites = Favorites()
         
         var body: some View {
             NavigationStack {
                 ItemDetail(item: MenuItem.example)
                 
-                Text("Total items: \(order.items.count) Total Value: $\(order.total)")
-            }.environmentObject(order)
+                Text("Order: \(order.items.count) items for $\(order.total)")
+                Text("Favorites: \(favorites.items.count) items")
+            }
+            .environmentObject(order)
+            .environmentObject(favorites)
         }
     }
 }

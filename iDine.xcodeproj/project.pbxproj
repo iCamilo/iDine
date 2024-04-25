@@ -24,6 +24,7 @@
 		5B5F98F82BDA9A93007F0887 /* PermanentMarker-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B5F98F62BDA9A93007F0887 /* PermanentMarker-Regular.ttf */; };
 		5B5F98F92BDA9A93007F0887 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5B5F98F72BDA9A93007F0887 /* LICENSE.txt */; };
 		5B5F98FD2BDA9F50007F0887 /* Font+custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5F98FC2BDA9F50007F0887 /* Font+custom.swift */; };
+		5B5F98FF2BDAAD9D007F0887 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5F98FE2BDAAD9D007F0887 /* Favorites.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		5B5F98F72BDA9A93007F0887 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		5B5F98FB2BDA9B1F007F0887 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5B5F98FC2BDA9F50007F0887 /* Font+custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+custom.swift"; sourceTree = "<group>"; };
+		5B5F98FE2BDAAD9D007F0887 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			children = (
 				5B5F97DA2BD802C4007F0887 /* Menu.swift */,
 				5B5F97D92BD802C4007F0887 /* Order.swift */,
+				5B5F98FE2BDAAD9D007F0887 /* Favorites.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				5B5F98E62BD81A70007F0887 /* ItemRow.swift in Sources */,
 				5B5F97D82BD80280007F0887 /* Helper.swift in Sources */,
 				5B5F97DC2BD802C4007F0887 /* Menu.swift in Sources */,
+				5B5F98FF2BDAAD9D007F0887 /* Favorites.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
