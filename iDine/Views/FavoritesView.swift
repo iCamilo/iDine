@@ -10,14 +10,16 @@ struct FavoritesView: View {
     private let title = "Favorites"
     
     private var hasFavorites: Bool {
-        favorites.items.isEmpty
+        !favorites.items.isEmpty
     }
     
     var body: some View {
-        if hasFavorites {
-            favoritesList
-        } else {
-            noFavoritesView
+        NavigationStack {
+            if hasFavorites {
+                favoritesList
+            } else {
+                noFavoritesView
+            }
         }
     }
     
@@ -50,7 +52,5 @@ struct FavoritesView: View {
 }
 
 #Preview {
-    NavigationStack {
-        FavoritesView().environmentObject(Favorites.demoFavorites)
-    }
+    FavoritesView().environmentObject(Favorites.demoFavorites)
 }
