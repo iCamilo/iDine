@@ -21,6 +21,9 @@
 		5B5F98F02BD9ABC7007F0887 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5F98EF2BD9ABC7007F0887 /* MainView.swift */; };
 		5B5F98F22BD9AE5A007F0887 /* CheckOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5F98F12BD9AE5A007F0887 /* CheckOutView.swift */; };
 		5B5F98F42BD9B89C007F0887 /* Order+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5F98F32BD9B89C007F0887 /* Order+Preview.swift */; };
+		5B5F98F82BDA9A93007F0887 /* PermanentMarker-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B5F98F62BDA9A93007F0887 /* PermanentMarker-Regular.ttf */; };
+		5B5F98F92BDA9A93007F0887 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5B5F98F72BDA9A93007F0887 /* LICENSE.txt */; };
+		5B5F98FD2BDA9F50007F0887 /* Font+custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5F98FC2BDA9F50007F0887 /* Font+custom.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,10 @@
 		5B5F98EF2BD9ABC7007F0887 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		5B5F98F12BD9AE5A007F0887 /* CheckOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutView.swift; sourceTree = "<group>"; };
 		5B5F98F32BD9B89C007F0887 /* Order+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Order+Preview.swift"; sourceTree = "<group>"; };
+		5B5F98F62BDA9A93007F0887 /* PermanentMarker-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PermanentMarker-Regular.ttf"; sourceTree = "<group>"; };
+		5B5F98F72BDA9A93007F0887 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		5B5F98FB2BDA9B1F007F0887 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		5B5F98FC2BDA9F50007F0887 /* Font+custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+custom.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +78,8 @@
 		5B5F97C22BD7FB77007F0887 /* iDine */ = {
 			isa = PBXGroup;
 			children = (
+				5B5F98FB2BDA9B1F007F0887 /* Info.plist */,
+				5B5F98FA2BDA9A99007F0887 /* Fonts */,
 				5B5F98EA2BD81DE6007F0887 /* JSONs */,
 				5B5F98E92BD81D9A007F0887 /* Utils */,
 				5B5F98E82BD81D8D007F0887 /* Models */,
@@ -127,6 +136,24 @@
 				5B5F98E32BD81072007F0887 /* menu.json */,
 			);
 			path = JSONs;
+			sourceTree = "<group>";
+		};
+		5B5F98F52BDA9A93007F0887 /* Permanent_Marker */ = {
+			isa = PBXGroup;
+			children = (
+				5B5F98F62BDA9A93007F0887 /* PermanentMarker-Regular.ttf */,
+				5B5F98F72BDA9A93007F0887 /* LICENSE.txt */,
+			);
+			path = Permanent_Marker;
+			sourceTree = "<group>";
+		};
+		5B5F98FA2BDA9A99007F0887 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5B5F98FC2BDA9F50007F0887 /* Font+custom.swift */,
+				5B5F98F52BDA9A93007F0887 /* Permanent_Marker */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +216,8 @@
 			files = (
 				5B5F98E42BD81072007F0887 /* menu.json in Resources */,
 				5B5F97CB2BD7FB7A007F0887 /* Preview Assets.xcassets in Resources */,
+				5B5F98F82BDA9A93007F0887 /* PermanentMarker-Regular.ttf in Resources */,
+				5B5F98F92BDA9A93007F0887 /* LICENSE.txt in Resources */,
 				5B5F97C82BD7FB7A007F0887 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -201,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B5F98EC2BD96AA8007F0887 /* ItemDetail.swift in Sources */,
+				5B5F98FD2BDA9F50007F0887 /* Font+custom.swift in Sources */,
 				5B5F98F02BD9ABC7007F0887 /* MainView.swift in Sources */,
 				5B5F98EE2BD998D2007F0887 /* OrderView.swift in Sources */,
 				5B5F97C62BD7FB77007F0887 /* ContentView.swift in Sources */,
@@ -348,6 +378,7 @@
 				DEVELOPMENT_TEAM = J7FJ227YZA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iDine/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -379,6 +410,7 @@
 				DEVELOPMENT_TEAM = J7FJ227YZA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iDine/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
