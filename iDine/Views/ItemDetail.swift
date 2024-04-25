@@ -15,6 +15,7 @@ struct ItemDetail: View {
             itemDescription
             
             addToCart
+                .padding(.horizontal)
             
             Spacer()
         }
@@ -45,7 +46,14 @@ struct ItemDetail: View {
         Button("Add to Cart") {
             order.add(item: item)
         }
-        .buttonStyle(.borderedProminent)
+        .padding()
+        .frame(maxWidth: .infinity)
+        .font(.permanentMarkerRegular(size: 20))
+        .foregroundColor(.white)
+        .background(Color.black)
+        .clipShape(RoundedRectangle(cornerRadius: 20, 
+                                    style: .continuous))
+        .shadow(color: .gray , radius: 5, x: 2, y: 2)
     }
 }
 
