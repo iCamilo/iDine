@@ -23,7 +23,7 @@ struct ItemDetail: View {
         }
         .navigationTitle(item.name)
         .toolbar {
-            ToolbarItem(placement: .topBarLeading) {
+            ToolbarItem(placement: .topBarTrailing) {
                 favoriteToggle
             }
         }
