@@ -25,6 +25,8 @@
 		5B5F98F92BDA9A93007F0887 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5B5F98F72BDA9A93007F0887 /* LICENSE.txt */; };
 		5B5F98FD2BDA9F50007F0887 /* Font+custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5F98FC2BDA9F50007F0887 /* Font+custom.swift */; };
 		5B5F98FF2BDAAD9D007F0887 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5F98FE2BDAAD9D007F0887 /* Favorites.swift */; };
+		5B5F99012BDAAE7D007F0887 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5F99002BDAAE7D007F0887 /* FavoritesView.swift */; };
+		5B5F99032BDAAF0E007F0887 /* Favorites+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5F99022BDAAF0E007F0887 /* Favorites+Preview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		5B5F98FB2BDA9B1F007F0887 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5B5F98FC2BDA9F50007F0887 /* Font+custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+custom.swift"; sourceTree = "<group>"; };
 		5B5F98FE2BDAAD9D007F0887 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
+		5B5F99002BDAAE7D007F0887 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		5B5F99022BDAAF0E007F0887 /* Favorites+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favorites+Preview.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,7 @@
 			children = (
 				5B5F97CA2BD7FB7A007F0887 /* Preview Assets.xcassets */,
 				5B5F98F32BD9B89C007F0887 /* Order+Preview.swift */,
+				5B5F99022BDAAF0E007F0887 /* Favorites+Preview.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -111,6 +116,7 @@
 				5B5F98EB2BD96AA8007F0887 /* ItemDetail.swift */,
 				5B5F98ED2BD998D2007F0887 /* OrderView.swift */,
 				5B5F98F12BD9AE5A007F0887 /* CheckOutView.swift */,
+				5B5F99002BDAAE7D007F0887 /* FavoritesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -236,8 +242,10 @@
 				5B5F98FD2BDA9F50007F0887 /* Font+custom.swift in Sources */,
 				5B5F98F02BD9ABC7007F0887 /* MainView.swift in Sources */,
 				5B5F98EE2BD998D2007F0887 /* OrderView.swift in Sources */,
+				5B5F99012BDAAE7D007F0887 /* FavoritesView.swift in Sources */,
 				5B5F97C62BD7FB77007F0887 /* ContentView.swift in Sources */,
 				5B5F97C42BD7FB77007F0887 /* iDineApp.swift in Sources */,
+				5B5F99032BDAAF0E007F0887 /* Favorites+Preview.swift in Sources */,
 				5B5F97DB2BD802C4007F0887 /* Order.swift in Sources */,
 				5B5F98F42BD9B89C007F0887 /* Order+Preview.swift in Sources */,
 				5B5F98F22BD9AE5A007F0887 /* CheckOutView.swift in Sources */,
