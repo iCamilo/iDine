@@ -23,6 +23,7 @@ struct ContentView: View {
             }
             .navigationDestination(for: MenuItem.self) { item in
                 ItemDetail(item: item)
+                    .toolbar(.hidden, for: .tabBar)
             }
             .navigationTitle("Menu")
             .listStyle(.grouped)
@@ -31,7 +32,13 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()        
+    TabView {
+        ContentView()
+            .tabItem { Text("Home") }
+            .environmentObject(Order())
+            .environmentObject(Favorites())
+    }
+    
 }
 
 
