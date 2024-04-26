@@ -42,6 +42,7 @@ struct OrderView: View {
     private var checkOut: some View {
         NavigationLink("Check Out") {
             CheckOutView()
+                .toolbar(.hidden, for: .tabBar)
         }
     }
 }
@@ -55,7 +56,11 @@ struct OrderView: View {
         
         var body: some View {
             VStack {
-                OrderView()
+                TabView {
+                    OrderView().tabItem {
+                        Label("Order", systemImage: "square.and.pencil")
+                    }
+                }
                 
                 VStack {
                     Button("Add Item") {
